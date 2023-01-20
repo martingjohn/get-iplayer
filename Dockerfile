@@ -8,7 +8,7 @@ RUN useradd -m \
             -d /app \
             $USER && \
     apt update && \
-    xargs apt install -y --no-install-recommends < requirements.apt \
+    xargs apt install -y --no-install-recommends < requirements.apt && \
     git clone https://github.com/get-iplayer/get_iplayer.git && \
     cp -v get_iplayer/get_iplayer /usr/bin/get_iplayer && \
     chown -R $USER:$USER /app
